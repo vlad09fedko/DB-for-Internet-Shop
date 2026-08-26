@@ -1,0 +1,10 @@
+CREATE TABLE orders (
+  id SERIAL,
+  code INTEGER,
+  date DATE,
+  customer_id INTEGER,
+  amount INTEGER,
+  paid BOOLEAN,
+  PRIMARY KEY(id),
+  FOREIGN KEY (CUSTOMER_ID) REFERENCES customers ON DELETE RESTRICT
+)

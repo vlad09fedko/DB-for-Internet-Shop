@@ -1,0 +1,6 @@
+CREATE TABLE item_order (
+  item_id INTEGER,
+  order_id INTEGER,
+  FOREIGN KEY (item_id) REFERENCES items ON DELETE RESTRICT,
+  FOREIGN KEY (order_id) REFERENCES orders ON DELETE RESTRICT
+)
